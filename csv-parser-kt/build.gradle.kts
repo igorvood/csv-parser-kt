@@ -5,7 +5,7 @@ plugins {
 //    id("io.spring.dependency-management")
 }
 
-group = "ru.vood.flow"
+group = "ru.vood.csv.parser"
 version = "0.0.1-SNAPSHOT"
 
 java {
