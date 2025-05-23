@@ -16,6 +16,18 @@ abstract class AbstractCsvEntityTemplate<T : ICSVLine> {
             .associate { FiledName(it.value) to it.index }
     }
 
+    fun IFieldConstants.getShort(strValues: List<String>): Short = convert(this, mapHeaderWithIndex, strValues)
+    fun IFieldConstants.getShortNullable(strValues: List<String>): Short? = convert(this, mapHeaderWithIndex, strValues)
+
+    fun IFieldConstants.getInt(strValues: List<String>): Int = convert(this, mapHeaderWithIndex, strValues)
+    fun IFieldConstants.getIntNullable(strValues: List<String>): Int? = convert(this, mapHeaderWithIndex, strValues)
+
+    fun IFieldConstants.getLong(strValues: List<String>): Long = convert(this, mapHeaderWithIndex, strValues)
+    fun IFieldConstants.getLongNullable(strValues: List<String>): Long? = convert(this, mapHeaderWithIndex, strValues)
+
+    fun IFieldConstants.getString(strValues: List<String>): String = convert(this, mapHeaderWithIndex, strValues)
+    fun IFieldConstants.getStringNullable(strValues: List<String>): String? = convert(this, mapHeaderWithIndex, strValues)
+
     private inline fun <reified T> convert(
         field: IFieldConstants,
         mapHeaderWithIndex: Map<FiledName, Int>,
