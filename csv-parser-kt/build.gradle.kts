@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    kotlin("plugin.serialization") version "2.1.21"
 //    kotlin("plugin.spring")
 //    id("org.springframework.boot")
 //    id("io.spring.dependency-management")
@@ -19,13 +20,15 @@ repositories {
 }
 
 dependencies {
-
+//    implementation(kotlin("stdlib"))
+//    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.8.1")
+//    implementation("org.jetbrains.kotlinx:kotlinx-serialization-csv:1.5.1")
     // https://mvnrepository.com/artifact/io.arrow-kt/arrow-core
     implementation(platform("io.arrow-kt:arrow-stack:2.1.1"))
     implementation(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.10.2"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    implementation("org.springframework:spring-web:6.2.5")
-    implementation("org.springframework:spring-webflux:6.2.5")
+//    implementation("org.springframework:spring-web:6.2.5")
+//    implementation("org.springframework:spring-webflux:6.2.5")
     api("io.arrow-kt:arrow-core-jvm:2.1.1")
 
     testImplementation(kotlin("test"))
